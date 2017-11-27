@@ -65,8 +65,7 @@ export default {
   },
 
   beforeMount() {
-    console.log(this.$getResource('post'))
-    if (!this.post) return;
+    if (!this.post) return;  // the ID is passing correctly but the issue might be over here??? 
     this.$getResource('post', this.post)
       .then(this.showComments)
   }

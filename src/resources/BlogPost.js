@@ -1,9 +1,9 @@
 export default {
   post(id) {
     return {
-      path: '/posts',
+      path: '/posts/' + id,
       resolve: (response, mappers) => {
-        return mappers.pipe(response[id])
+        return mappers.pipe(response)
       }
     }
   }

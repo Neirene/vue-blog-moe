@@ -5,7 +5,7 @@
         <transition name="v--fade">
           <figcaption v-if="!reading || $device.phone" class="preview__details">
             <router-link class="preview__title"
-              :to="`/read/${post.slug}`"
+              :to="`/read/${post.id}`"
               @click.native="scrollTo(0, 220, scrollDelay)">
               {{ post.title.rendered }}
             </router-link>
