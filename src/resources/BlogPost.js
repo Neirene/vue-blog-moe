@@ -9,7 +9,7 @@ export default {
         content = content.rendered;
         description = response.excerpt.rendered;
         published = response.date;
-        author = response.author;
+        author = 'Neirene';
 
         return mappers.merge({ title, content, description, published, author })
       }

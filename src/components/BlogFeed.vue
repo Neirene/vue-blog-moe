@@ -16,9 +16,9 @@
               </time>
 
               <router-link class="preview__author"
-                :to="`/by/${post.author}`"
+                :to="`/by/${writer}`"
                 @click.native="scrollTo(0, 220, scrollDelay)">
-                {{ post.author }}
+                {{ writer }}
               </router-link>
             </div>
           </figcaption>
@@ -45,6 +45,7 @@ export default {
   data() {
     return {
       posts: [],
+      writer: 'Neirene',
       transition: 'preview-appear'
     }
   },

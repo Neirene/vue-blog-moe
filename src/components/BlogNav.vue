@@ -3,7 +3,9 @@
     <h1 class="nav__title">
       <router-link to="/">{{ content.title }}</router-link>
     </h1>
-
+    <ul>
+      <li v-for="page in content.pages" :key="page">{{page}}</li>
+    </ul>
     <transition-group tag="menu" name="nav__item" class="nav__menu">
       <li v-for="label in labels" class="nav__item" :key="label" @click="navBack">
         <i class="nav__item--icon"></i>

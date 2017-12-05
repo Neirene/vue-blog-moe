@@ -21,5 +21,10 @@ export default new Router({
     name: 'post',
     props: true,
     component: Blog
+  }, {
+    path: '/:pages',
+    name: 'pages',
+    props: true,
+    component: Blog
   }]
 })
