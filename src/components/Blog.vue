@@ -29,14 +29,13 @@ export default {
       labels: {
         post: '',
         author: ''
-      },
-      pageTitle: []
+      }
     }
   },
 
   computed: {
     content() {
-      return { title: this.title, labels: this.labels, pages: this.pageTitle }
+      return { title: this.title, labels: this.labels }
     },
     filters() {
       let filters = {}
@@ -56,7 +55,6 @@ export default {
 
   beforeMount() {
     this.$getResource('blog')
-    this.$getResource('pages')
   }
 }
 </script>

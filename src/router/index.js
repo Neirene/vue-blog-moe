@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Blog from '../components'
+import TitleScreen from '../components/TitleScreen'
 
 Vue.use(Router)
 
@@ -8,7 +9,7 @@ export default new Router({
   mode: 'history',
   linkActiveClass: 'active',
   routes: [{
-    path: '/',
+    path: '/home',
     name: 'feed',
     component: Blog
   }, {
@@ -22,9 +23,9 @@ export default new Router({
     props: true,
     component: Blog
   }, {
-    path: '/:pages',
-    name: 'pages',
+    path: '/',
+    name: 'title',
     props: true,
-    component: Blog
+    component: TitleScreen
   }]
 })

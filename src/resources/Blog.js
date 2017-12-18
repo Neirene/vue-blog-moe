@@ -13,20 +13,5 @@ export default {
         })
       }
     }
-  },
-  pages() {
-    return {
-      path: '/pages',
-      resolve: (response, mappers) => {
-        let pageTitle = [];
-
-        for (var i = 0; i < response.length; i++) {
-          pageTitle.push(response[i].title.rendered);
-        }
-
-        // console.log(pageTitle);
-        return mappers.merge({ pageTitle })
-      }
-    }
   }
 }

@@ -3,9 +3,6 @@
     <h1 class="nav__title">
       <router-link to="/">{{ content.title }}</router-link>
     </h1>
-    <ul>
-      <li v-for="page in content.pages" :key="page">{{page}}</li>
-    </ul>
     <transition-group tag="menu" name="nav__item" class="nav__menu">
       <li v-for="label in labels" class="nav__item" :key="label" @click="navBack">
         <i class="nav__item--icon"></i>
@@ -16,6 +13,7 @@
 </template>
 
 <script>
+import { scrollTo } from '../helpers'
 export default {
   name: 'blog-nav',
   props: {
@@ -28,6 +26,7 @@ export default {
   },
 
   computed: {
+    scrollDelay() { return (this.$device.phone) ? 0 : 560 },
     labels() {
       return Object.keys(this.filters)
         .map(filter => this.content.labels[filter])
@@ -35,6 +34,7 @@ export default {
   },
 
   methods: {
+    scrollTo,
     navBack() {
       if (this.navs && !this.filters.author) this.$router.go(-1)
       else this.$router.push('/')

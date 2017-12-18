@@ -6,7 +6,9 @@ import router from './router'
 import * as resources from './resources'
 import resource from './plugins/resource'
 import deviceQueries from './plugins/device-queries'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 
+Vue.use(VueYouTubeEmbed)
 Vue.config.productionTip = false
 
 Vue.use(resource, {
