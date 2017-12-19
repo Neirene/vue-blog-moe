@@ -1,6 +1,6 @@
 <template>
   <transition-group tag="ul" :name="transition"  class="blog__feed">
-    <li v-for="post in feed" class="preview" :key="post.id">
+    <li v-for="post in feed" class="preview" :key="post.id" @mouseover="sendPostBg(post.featured_media_url)">
       <figure class="preview__figure" :class="figureClass" :style="getBgImg(post.featured_media_url)">
         <transition name="v--fade">
           <figcaption v-if="!reading || $device.phone" class="preview__details">
@@ -39,7 +39,8 @@ export default {
     filters: {
       type: Object,
       default: () => {}
-    }
+    },
+    postBackgroundUrl: String
   },
 
   data() {
@@ -78,6 +79,11 @@ export default {
     prettyDate,
     getBgImg(src) {
       return { backgroundImage: `url(${src})` }
+    },
+    sendPostBg(url) {
+      let postBgUrl = url;
+      this.$parent.$emit('post-background-url', postBgUrl)
+      // return postBgUrl = this.postBackgroundUrl;
     },
     stackPosts(posts) {
       let interval

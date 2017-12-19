@@ -1,6 +1,7 @@
 <template>
   <main class="blog" :class="{ 'blog--reading': this.post }">
     <blog-nav :content="content" :filters="filters" :navs="navs"/>
+    <blog-background :background="postBackgroundUrl" :fill-screen="true" :hide-backdrop="false" @change="updateBackground"/>
     <blog-feed :filters="filters"/>
     <blog-post :post="post"/>
     <blog-footer/>
@@ -11,11 +12,12 @@
 import BlogNav from './BlogNav'
 import BlogFeed from './BlogFeed'
 import BlogPost from './BlogPost'
+import BlogBackground from './BlogBackground'
 import BlogFooter from './BlogFooter'
 
 export default {
   name: 'blog',
-  components: { BlogNav, BlogFeed, BlogPost, BlogFooter },
+  components: { BlogNav, BlogFeed, BlogPost, BlogFooter, BlogBackground },
   resource: 'Blog',
   props: {
     post: String,
@@ -29,8 +31,16 @@ export default {
       labels: {
         post: '',
         author: ''
-      }
+      },
+      postBackgroundUrl: ''
     }
+  },
+
+  mounted() {
+    this.$on('post-background-url', function(postBackgroundUrl) {
+      // console.log(postBackgroundUrl);
+      this.postBackgroundUrl = postBackgroundUrl;
+    }.bind(this))
   },
 
   computed: {
@@ -44,6 +54,9 @@ export default {
       if (this.author) filters.author = this.author
 
       return filters
+    },
+    pic() {
+      return this
     }
   },
 

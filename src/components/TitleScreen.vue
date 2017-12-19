@@ -3,7 +3,7 @@
   
   <h1>THIS VERSION IS UNDER CONSTRUCTION<img src="../assets/logo.svg"></h1>
   <h2 class="start-bt" @click = "switchPage">PRESS THE START BUTTON<img src="../assets/start.svg"></h2>
-  <h4>Licensed by MOGURA, Copyright Nei Softworks 2000-2018, UNFINISHED VERSION DO NOT USE</h4>
+  <h4>Licensed by MOGURA, Copyright Nei Softworks 2000-2018 <br><br><b>DevBuildRev.00056 - 2017/12/19 - WORK IN PROGRESS</b></h4>
   <div class="video-bg"><youtube :video-id="videoId" :mute="true" :player-vars="{ autoplay: 1 }" @ready="ready"></youtube></div>
 </section>
 </template>
