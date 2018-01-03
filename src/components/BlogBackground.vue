@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-picture">{{ background }}{{ fillScreen }}{{ hideBackdrop }}}</div>
+  <div class="bg-container" >
+    <div class="bg-visual" :style="updateBackground()"></div>
+  </div>
 </template>
 
 <script>
@@ -23,7 +25,7 @@ export default {
 
   methods: {
     updateBackground() {
-      console.log('MIMIMIMIMIMIMIMIMI');
+      return { backgroundImage: 'url(' + this.background + ')' }
     },
     navBack() {
       if (this.navs && !this.filters.author) this.$router.go(-1)

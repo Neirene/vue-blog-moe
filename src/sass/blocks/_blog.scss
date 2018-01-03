@@ -27,8 +27,13 @@
   }
 
   &__feed {
-    position: relative;
-    padding: 0 .625rem;
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:calc(100%/2);
+    height:100vh;
+    overflow-y:auto;
+    overflow-x:hidden;
 
     @media (--tablet) {
       display: flex;

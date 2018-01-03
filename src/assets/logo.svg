@@ -36,21 +36,6 @@
       }
 
 
-.logo-star {
-  animation: star-rotate 5s infinite;
-  transform-origin: 50% 50%;
-}
-
-@keyframes star-rotate {
-  0%{
-    transform: rotate(0deg)
-  }
-  100%{
-    transform: rotate(360deg)
-  }
-}
-
-
     ]]></style>
 
     </defs>
@@ -71,5 +56,4 @@
         </g>
     </g>
     <circle id="Center_Circle" data-name="Center Circle" class="cls-3" cx="738.39" cy="261.87" r="30"/>
-    <polygon id="STAR" class="cls-3 logo-star" points="730.98 8.55 719.44 47.25 744.78 78.69 704.41 79.67 682.34 113.49 668.93 75.4 629.95 64.85 662.03 40.33 660.01 0 693.25 22.93 730.98 8.55"/>
     </svg>

@@ -1,7 +1,7 @@
 <template>
   <transition-group tag="ul" :name="transition"  class="blog__feed">
     <li v-for="post in feed" class="preview" :key="post.id" @mouseover="sendPostBg(post.featured_media_url)">
-      <figure class="preview__figure" :class="figureClass" :style="getBgImg(post.featured_media_url)">
+      <figure class="preview__figure" :class="figureClass">
         <transition name="v--fade">
           <figcaption v-if="!reading || $device.phone" class="preview__details">
             <router-link class="preview__title"

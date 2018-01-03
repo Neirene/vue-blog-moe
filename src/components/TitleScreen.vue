@@ -41,7 +41,6 @@ export default {
   methods: {
     ready (player) {
       this.player = player;
-      this.player.startVideo();
     },
 
     switchPage() {

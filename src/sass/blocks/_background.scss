@@ -1,0 +1,18 @@
+.bg-container {
+    background-color: #0e2a43;
+    animation: flickering-pattern 0.1s infinite;
+    color:white;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vw;
+
+    .bg-visual {
+        width:inherit;
+        height:inherit;
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+    
+}
