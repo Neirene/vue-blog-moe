@@ -1,6 +1,8 @@
 .bg-container {
     background-color: #0e2a43;
     animation: flickering-pattern 0.1s infinite;
+    background-image: url('./assets/pattern.png');
+    background-repeat: repeat;
     color:white;
     position:fixed;
     top:0px;
@@ -11,8 +13,9 @@
     .bg-visual {
         width:inherit;
         height:inherit;
-        background-size:cover;
+        background-size:contain;
         background-repeat:no-repeat;
     }
     
 }
+

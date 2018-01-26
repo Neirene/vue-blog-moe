@@ -4,22 +4,22 @@
   left: 50%;
   width: calc(100% - 2.5rem);
   max-width: 90rem;
-  padding: 1.25rem .625rem .625rem;
-  border-bottom: 1px solid cc(border);
-  background-color: cc(bg, .975);
-  box-shadow: 0 -50vw 0 50vw cc(bg, .975);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   transform: translate(-50%);
   z-index: 1;
 
+
   @media (--tablet) {
     padding: 1.75rem 1.25rem 1.25rem;
   }
 
   @media (--desktop) {
-    width: calc(100% - 10rem);
+    width: calc(100% - 60vw);
+    transform: none;
+    left: 0;
+
   }
 
   @media (--monitor) {
@@ -28,7 +28,18 @@
 
   &__title {
     @extend %txt--banner;
-    color: cc(txt, alt);
+    position:relative;
+    width:calc(100% - 18vw);
+    transform: translateX(-50%);
+    left:50%;
+    margin-top:0rem;
+
+    @media (--phone) {
+      position:absolute;
+      margin-top:2rem;
+    }
+
+    
   }
 
   &__menu {
@@ -130,5 +141,103 @@
         display: none;
       }
     }
+  }
+
+
+
+
+}
+
+
+.logo-menu{
+
+
+
+  &-path-1 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 811;  //total length of the element
+      stroke-dashoffset: 811;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-2 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 1086;  //total length of the element
+      stroke-dashoffset: 1086;
+      animation: dash 5s linear forwards;   
+  }
+
+  &-path-3 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 1435;  //total length of the element
+      stroke-dashoffset: 1435;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-4 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 506;  //total length of the element
+      stroke-dashoffset: 506;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-5 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 1505;  //total length of the element
+      stroke-dashoffset: 1505;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-6 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 1818;  //total length of the element
+      stroke-dashoffset: 1818;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-7 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 157;  //total length of the element
+      stroke-dashoffset: 157;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-8 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 154;  //total length of the element
+      stroke-dashoffset: 154;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-9 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 952;  //total length of the element
+      stroke-dashoffset: 952;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-10 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 655;  //total length of the element
+      stroke-dashoffset: 655;
+      animation: dash 5s linear forwards;
+  }
+
+  &-path-11 {
+      stroke:#ffffff;
+      fill:none;
+      stroke-dasharray: 188;  //total length of the element
+      stroke-dashoffset: 188;
+      animation: dash 5s linear forwards;
   }
 }

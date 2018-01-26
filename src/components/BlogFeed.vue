@@ -14,12 +14,6 @@
               <time class="preview__published">
                 {{ prettyDate(post.date) }}
               </time>
-
-              <router-link class="preview__author"
-                :to="`/by/${writer}`"
-                @click.native="scrollTo(0, 220, scrollDelay)">
-                {{ writer }}
-              </router-link>
             </div>
           </figcaption>
         </transition>

@@ -37,7 +37,10 @@
 
   &__figure {
     position: relative;
+    background-color:black;
     transition: padding-top 275ms cb(out);
+    border-left: 10px solid rgb(55, 208, 255);
+    padding:0.2rem;
 
 
     &--mobile {
@@ -70,6 +73,7 @@
     left: 0;
     padding: .5rem 0;
     font-size: .9rem;
+    background-color:white;
 
     @media (--tablet) {
       white-space: nowrap;
@@ -77,13 +81,11 @@
   }
 
   &__published::after {
-    content: 'by';
-    padding: 0 .25rem;
+    content: '';
   }
 
   &__author {
     @extend %ff--500;
-    text-decoration: underline;
     white-space: nowrap;
     font-size: .9rem;
   }

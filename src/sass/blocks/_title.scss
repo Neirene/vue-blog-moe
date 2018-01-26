@@ -1,4 +1,4 @@
-.title-area {
+.title {
     width:100%;
     min-height:100vh;
     display: flex;
@@ -6,21 +6,38 @@
     justify-content: center;
     flex-wrap:wrap;
     background-color: #0e2a43;
+    color:white;
     animation: flickering-pattern 0.1s infinite;
 
-    & h1 {
-        width:100%;
+    &__logo {
+        position:absolute;
+        top:15rem;
+        width:calc(100% - 10vw);
         z-index:10;
     }
 
-    & h2 {
-        width:100%;
+    &__start {
+        position:absolute;
+        margin-top:10rem;
+        width:calc(100% - 25vw);
         z-index:10;
+
+        @media (--phone) {
+            margin-top:0rem;
+          }
+
     }
 
-    & h4 {
+    &__copy {
+        position:absolute;
+        bottom:2rem;
         width:100%;
         z-index:10;
+        text-align:center;
+
+        @media (--phone) {
+            font-size:0.7rem;
+        }
     }
 
     & .video-bg {
@@ -34,6 +51,127 @@
 
 }
 
+/*
+get svg full length:
+
+var path = document.querySelector('.logo-visual-path-1');
+var length = Math.round(path.getTotalLength());
+console.log(length)
+
+*/
+
+.logo-visual {
+
+    &-path-1 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 811;  //total length of the element
+        stroke-dashoffset: 811;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-2 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 1086;  //total length of the element
+        stroke-dashoffset: 1086;
+        animation: dash 5s linear forwards;   
+    }
+
+    &-path-3 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 1435;  //total length of the element
+        stroke-dashoffset: 1435;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-4 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 506;  //total length of the element
+        stroke-dashoffset: 506;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-5 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 1505;  //total length of the element
+        stroke-dashoffset: 1505;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-6 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 1818;  //total length of the element
+        stroke-dashoffset: 1818;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-7 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 157;  //total length of the element
+        stroke-dashoffset: 157;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-8 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 154;  //total length of the element
+        stroke-dashoffset: 154;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-9 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 952;  //total length of the element
+        stroke-dashoffset: 952;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-10 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 655;  //total length of the element
+        stroke-dashoffset: 655;
+        animation: dash 5s linear forwards;
+    }
+
+    &-path-11 {
+        stroke:#ffffff;
+        fill:none;
+        stroke-dasharray: 188;  //total length of the element
+        stroke-dashoffset: 188;
+        animation: dash 5s linear forwards;
+    }
+}
+
+
+.start-visual {
+    fill:#ffffff;
+    animation: start-fade 3s infinite;
+
+  & svg path {
+    fill:#bdfaff;
+    filter: url(#blue-glow);
+  }
+
+  & svg:hover path {
+    fill:#ffffff;
+    filter: url(#pink-glow);
+  }
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
 @keyframes flickering-pattern {
     0% {
@@ -45,3 +183,18 @@
 
   }
 }
+
+@keyframes start-fade {
+    0% {
+      opacity:0.3;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+  
+    }
+  }
