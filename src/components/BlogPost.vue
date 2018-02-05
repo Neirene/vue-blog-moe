@@ -4,9 +4,7 @@
       <header class="post__header">
         <h2 class="post__title">{{ title }}</h2>
 
-        <h3 class="post__meta">by <router-link class="post__author"
-          :to="`/by/${author}`">{{ author }}</router-link>
-          <span class="post__sep"></span>
+        <h3 class="post__meta">
           <time>{{ prettyDate(published) }}</time>
         </h3>
 
@@ -14,22 +12,19 @@
 
       <section class="post__body rte" v-html="content"></section>
 
-      <footer class="post__footer">
-        <vue-disqus v-if="commentsReady" shortname="neimoe"
-          :key="post" :identifier="post" :url="`https://nei.moe/read/${post}`"/>
-      </footer>
+
     </article>
   </transition>
 </template>
 
 <script>
-import VueDisqus from 'vue-disqus/VueDisqus'
+// import VueDisqus from 'vue-disqus/VueDisqus'
 import { kebabify, prettyDate } from '../helpers'
 
 export default {
   name: 'blog-post',
   resource: 'BlogPost',
-  components: { VueDisqus },
+  components: {},
   props: { post: String },
 
   data() {

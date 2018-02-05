@@ -13,8 +13,10 @@
     .bg-visual {
         width:inherit;
         height:inherit;
-        background-size:contain;
+        background-size:cover;
+        background-position:50% 50%;
         background-repeat:no-repeat;
+        filter: blur(1px);
     }
     
 }

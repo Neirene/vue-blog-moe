@@ -1,21 +1,14 @@
 .preview {
   position: relative;
-  margin: 1.25rem 1.25rem 5rem;
-  z-index: 0;
+  z-index: 700;
 
 
   @media (--tablet) {
-    width: calc(50% - 2.5rem);
-    margin: 1.25rem 1.25rem 2.5rem;
-  }
-
-  @media (--laptop) {
-    width: calc(100% - 2.5rem);
+    //width: calc(50% - 2.5rem);
   }
 
   @media (--desktop) {
-    width: calc(100% - 5rem);
-    margin: 2.5rem;
+    width: 100%;
   }
 
   &-move { transition: all 550ms cb() }
@@ -37,15 +30,11 @@
 
   &__figure {
     position: relative;
-    background-color:black;
+    background-color:rgb(20, 20, 20);
     transition: padding-top 275ms cb(out);
-    border-left: 10px solid rgb(55, 208, 255);
+    border-right: 10px solid rgb(55, 208, 255);
     padding:0.2rem;
 
-
-    &--mobile {
-      padding-top: 90%;
-    }
   }
 
 
@@ -71,7 +60,7 @@
     position: absolute;
     bottom: 100%;
     left: 0;
-    padding: .5rem 0;
+    padding: 0.5rem;
     font-size: .9rem;
     background-color:white;
 
@@ -87,6 +76,6 @@
   &__author {
     @extend %ff--500;
     white-space: nowrap;
-    font-size: .9rem;
+    font-size: 1rem;
   }
 }

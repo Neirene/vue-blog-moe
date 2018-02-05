@@ -1,5 +1,17 @@
 <template>
 <section class="title">
+
+  <div class="title__3dvisual">
+<!--
+     <a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+ -->
+  </div>
   
   <div class="title__logo">
     <svg class="logo-visual" id="main-logo" data-name="main logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1412.62 248.13">
@@ -15,8 +27,7 @@
       <path class="logo-visual-path-6" d="M619.63,138.24H408.2V198.3l211.19,0-55.91,48.37H396q-31.26,0-45.41-14.16-13.18-14.16-13.19-45.41V64q0-63,64-63H573.24q23.93,0,34.67,13.18Q619.63,28.86,619.63,64Zm-54.2-27.83V50.84H408.2v59.57Z" transform="translate(0.5 0.5)" />
     </g>
     <g>
-      <path class="logo-visual-path-7" d="M841.79,201.42V169.7H800.63v39.11h29.81Q841.8,208.81,841.79,201.42Z" transform="translate(0.5 0.5)" />
-      <rect class="logo-visual-path-8" x="801.13" y="103.13" width="41.17" height="35.85" />
+
       <path class="logo-visual-path-9" d="M753.78,102.34a40,40,0,0,1,0,73.86v70.07H854.57q34.06,0,34.07-24.27V65.67H753.78Zm46.85.29h41.16v35.84H800.63Zm0,67.07h41.16v31.72q0,7.4-11.35,7.39H800.63Z" transform="translate(0.5 0.5)" />
       <path class="logo-visual-path-10" d="M652.34,246.29h70.8v-70a40,40,0,0,1,0-74V0h-70.8Z" transform="translate(0.5 0.5)" />
     </g>
@@ -78,7 +89,8 @@
 
 
   </h2>
-  <h4 class="title__copy">Licensed by MOGURA, Copyright Nei Softworks 2000-2018 <br><br><b>DevBuildRev.00056 - 2017/12/19 - WORK IN PROGRESS</b></h4>
+  <h4 class="title__copy">Licensed by MOGURA, Copyright Nei Softworks 2000-2018 <br><br><b>DevBuildRev.00089 - 2018/02/05 - WORK IN PROGRESS</b></h4>
+
 </section>
 </template>
 

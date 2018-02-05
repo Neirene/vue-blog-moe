@@ -1,14 +1,14 @@
 // font stack
 @mixin font-stack($ff, $weight: normal) {
-  font-family: #{$ff}, Helvetica, Arial, sans-serif;
+  font-family: #{$ff}, 'Exo',Helvetica, Arial, sans-serif;
   font-weight: $weight;
 }
 
 // font families
-%ff--200 { @include font-stack('Prompt', 200) }
-%ff--300 { @include font-stack('Prompt', 300) }
-%ff--500 { @include font-stack('Prompt', 500) }
-%ff--700 { @include font-stack('Prompt', 700) }
+%ff--200 { @include font-stack('Exo', 200) }
+%ff--300 { @include font-stack('Exo', 300) }
+%ff--500 { @include font-stack('Exo', 500) }
+%ff--700 { @include font-stack('Exo', 700) }
 
 // extend placeholders
 %txt--body {
